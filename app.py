@@ -2,7 +2,7 @@ import requests
 import random
 import sqlite3
 import os
- HEAD
+HEAD
 from flask import Flask, render_template, request, jsonify, redirect, render_template_string
 
 from flask import Flask, render_template, render_template_string, request, jsonify, redirect
