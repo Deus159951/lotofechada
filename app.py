@@ -369,7 +369,7 @@ def index():
                                       ganhadores_15=ganhadores_15,
                                       ganhadores_14=ganhadores_14)
     
-    return render_template(
+    return render_template()
         'index.html', 
 =======
             "status": l[5]
