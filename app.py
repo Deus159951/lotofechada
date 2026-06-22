@@ -607,11 +607,4 @@ def salvar_venda():
                         """
                         return render_template_string(pix_template)
 
-        return jsonify({"sucesso": False, "mensagem": "Erro ao comunicar com o gateway de pagamento."}), 500
-
-    except Exception as e:
-        return jsonify({"sucesso": False, "mensagem": f"Exceção capturada: {str(e)}"}), 500
-
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 1000))
-    app.run(host='0.0.0.0', port=port)
+        return jsonify({"sucesso":
