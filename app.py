@@ -193,7 +193,7 @@ def index():
     
     vendas_aprovadas = []
     for l in linhas:
-        vendas_aprovadas.append({
+        vendas_aprovadas.append()
 >>>>>>> a7da25260dceea429f5eb518d6e1724241ceebfa
             "id_combinacao": l[0],
             "dezenas": l[1],
