@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIME PRINT - Reserve suas Combinações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f6f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .card { border: none; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .btn-primary { background-color: #2b8a3e; border: none; }
+        .btn-primary:hover { background-color: #237032; }
+        .dezenas-preview { font-weight: bold; font-size: 1.1rem; min-height: 27px; }
+        .status-disponivel { color: #2b8a3e; }
+        .status-bloqueado { color: #dc3545; }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+                
+                <div class="text-center mb-4">
+                    <h1 class="h3 fw-bold text-dark">PRIME PRINT</h1>
+                    <p class="text-muted">Escolha suas combinações e faça sua reserva oficial de cotas</p>
+                </div>
+
+                <div class="card p-4">
+                    <h3 class="h5 fw-bold text-dark border-start border-success border-3 ps-2 mb-3">Escolher e Reservar Cotas</h3>
+                    
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Como deseja escolher?</label>
+                        <select class="form-select" id="tipo_venda" name="tipo_venda" form="form_venda" onchange="alternarModo(this.value)">
+                            <option value="unico">Apenas 1 Combinação Específica</option>
+                            <option value="lote">Comprar em Lote (Intervalo de IDs)</option>
+                        </select>
+                    </div>
+
+                    <form action="/salvar_venda" method="POST" id="form_venda">
+                        <input type="hidden" name="origem" value="cliente">
+                        
+                        <div id="grupo_unico" class="mb-3">
+                            <label class="form-label fw-bold">ID da Combinação (1 a 3.268.760):</label>
+                            <input type="number" name="id_combinacao" id="id_combinacao" class="form-control" min="1" max="3268760" placeholder="Ex: 154320" required oninput="buscarDezenas(this.value)">
+                            <div class="mt-2 small text-muted">Status / Dezenas: <span id="preview-dezenas" class="dezenas-preview text-dark">-</span></div>
+                        </div>
+
+                        <div id="grupo_lote" class="mb-3 d-none">
+                            <label class="form-label fw-bold">Defina o Intervalo desejado:</label>
+                            <div class="row g-2">
+                                <div class="col">
+                                    <input type="number" name="id_inicial" class="form-control" min="1" max="3268760" placeholder="ID Inicial">
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="id_final" class="form-control" min="1" max="3268760" placeholder="ID Final">
+                                </div>
+                            </div>
+                            <p class="text-muted small mt-2 mb-0">💡 Cotas já compradas por outras pessoas no intervalo serão validadas automaticamente pelo sistema.</p>
+                        </div>
+
+                        <hr>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Seu Nome Completo:</label>
+                            <input type="text" name="nome_cliente" class="form-control" placeholder="Digite seu nome" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Seu WhatsApp / Contato:</label>
+                            <input type="text" name="contato" class="form-control" placeholder="(00) 00000-0000" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 fw-bold py-2 mt-2">Confirmar Reserva de Cotas</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function alternarModo(modo) {
+            const grupoUnico = document.getElementById('grupo_unico');
+            const grupoLote = document.getElementById('grupo_lote');
+            const inputUnico = document.getElementById('id_combinacao');
+
+            if (modo === 'unico') {
+                grupoUnico.classList.remove('d-none');
+                grupoLote.classList.add('d-none');
+                inputUnico.setAttribute('required', 'required');
+            } else {
+                grupoUnico.classList.add('d-none');
+                grupoLote.classList.remove('d-none');
+                inputUnico.removeAttribute('required');
+            }
+        }
+
+        function buscarDezenas(id) {
+            const preview = document.getElementById('preview-dezenas');
+            if (!id || id < 1 || id > 3268760) {
+                preview.innerText = "-";
+                preview.className = "dezenas-preview text-dark";
+                return;
+            }
+            fetch(`/buscar_combinacao/${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.sucesso) {
+                        preview.innerText = data.dezenas;
+                        preview.className = "dezenas-preview status-disponivel";
+                    } else {
+                        preview.innerText = data.mensagem;
+                        preview.className = "dezenas-preview status-bloqueado fw-bold";
+                    }
+                })
+                .catch(() => {
+                    preview.innerText = "Erro ao buscar";
+                });
+        }
+    </script>
+</body>
+</html>
