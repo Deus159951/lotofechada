@@ -2,11 +2,11 @@ import requests
 import random
 import sqlite3
 import os
+
 from flask import Flask, render_template, request, jsonify, redirect, render_template_string
 from math import comb
 
 app = Flask(__name__)
-
 # ==========================================
 # CONFIGURAÇÕES DO SISTEMA 
 # ==========================================
