@@ -3,605 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-HEAD
-    <title>LOTO-FACIL FECHADA - Central de Cotas Inteligente</title>
-=======
-    <title>PRIME PRINT - Central de Cotas Inteligente</title>
-a7da25260dceea429f5eb518d6e1724241ceebfa
+    <title>LOTO-FACIL FECHADA - PRIME PRINT</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: 0 auto; }
-        header { text-align: center; margin-bottom: 40px; padding: 20px; border-bottom: 2px solid #1e293b; }
-        h1 { margin: 0; color: #3b82f6; font-size: 32px; letter-spacing: 1px; text-shadow: 0 0 15px rgba(59,130,246,0.3); }
-        .sub-header { color: #94a3b8; font-size: 14px; margin-top: 5px; }
-        .grid-painéis { display: grid; grid-template-columns: 1fr; gap: 30px; }
-        .card { background: #1e293b; border-radius: 12px; padding: 25px; border: 1px solid #334155; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        h2 { margin-top: 0; font-size: 20px; color: #f1f5f9; display: flex; align-items: center; gap: 10px; }
-HEAD
-        h3 { margin-top: 0; font-size: 16px; color: #3b82f6; margin-bottom: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 8px; }
-=======
-a7da25260dceea429f5eb518d6e1724241ceebfa
-        .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 1px solid #334155; padding-bottom: 10px; }
-        .tab-btn { background: #0f172a; border: 1px solid #334155; color: #94a3b8; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 13px; }
-        .tab-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
-        label { display: block; margin-bottom: 6px; font-size: 13px; color: #cbd5e1; font-weight: 500; }
-        input[type="text"], input[type="number"] { width: 100%; padding: 10px 12px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; color: white; font-size: 14px; box-sizing: border-box; margin-bottom: 15px; }
-        input:focus { border-color: #3b82f6; outline: none; }
-        textarea { width: 100%; padding: 10px 12px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; color: white; font-size: 14px; box-sizing: border-box; resize: vertical; }
-        textarea:focus { border-color: #3b82f6; outline: none; }
-        .preview-box { background: #0f172a; border: 1px solid #334155; padding: 12px; border-radius: 4px; margin-bottom: 20px; display: none; }
-        .btn-acao { background: #10b981; color: white; border: none; width: 100%; padding: 12px; border-radius: 6px; font-size: 15px; font-weight: bold; cursor: pointer; transition: 0.2s; }
-        .btn-acao:hover { background: #059669; }
-        .btn-simular { background: #3b82f6; }
-        .btn-simular:hover { background: #2563eb; }
-        .btn-regras { background: #475569; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: bold; margin-top: 15px; transition: 0.2s; }
-        .btn-regras:hover { background: #64748b; }
-HEAD
-        
-=======
-a7da25260dceea429f5eb518d6e1724241ceebfa
-        .vendas-container { max-height: 250px; overflow-y: auto; background: #0f172a; border-radius: 6px; padding: 10px; border: 1px solid #334155; }
-        .item-venda { display: flex; justify-content: space-between; align-items: center; padding: 8px; border-bottom: 1px solid #1e293b; font-size: 13px; }
-        .badge-pontos { padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; }
-        .bg-ganhou { background: #10b981; color: white; }
-        .bg-normal { background: #334155; color: #cbd5e1; }
-        .alert-resultado { background: #0f172a; border: 1px solid #10b981; padding: 12px; border-radius: 6px; margin-bottom: 20px; text-align: center; }
-      .admin-info-localizacao { background: #0f172a; padding: 8px 12px; border-radius: 6px; margin-top: 8px; font-size: 12px; color: #94a3b8; border-left: 3px solid #ef4444; }
-        
-        .passos-fluxo { display: flex; gap: 15px; margin-bottom: 20px; font-size: 12px; font-weight: bold; text-transform: uppercase; }
-        .p-etapa { padding: 6px 12px; border-radius: 4px; background: #0f172a; color: #475569; border: 1px solid #1e293b; }
-        .p-etapa.ativo { background: #2563eb; color: #fff; border-color: #3b82f6; }
-
-        .alternador-login { display: block; text-align: right; margin-bottom: 15px; font-size: 13px; color: #3b82f6; text-decoration: none; font-weight: bold; cursor: pointer; }
-        .alternador-login:hover { text-decoration: underline; }
-
-        .box-cliente-conectado { background: #0f172a; border: 1px dashed #3b82f6; padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .btn-logoff { background: #ef4444; color: white; border: none; padding: 5px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; cursor: pointer; }
-        .btn-logoff:hover { background: #dc2626; }
-=======
- a7da25260dceea429f5eb518d6e1724241ceebfa
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a192f;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            padding: 50px 20px;
+        }
+        h1 {
+            color: #3b82f6;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        p.subtitle {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        .btn-regras {
+            background-color: #475569;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .btn-regras:hover {
+            background-color: #334155;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 10px;
+        }
+        .tab-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .tab-btn {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #475569;
+            background-color: #0f172a;
+            color: white;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
     <header>
- HEAD
         <h1>LOTO-FACIL FECHADA</h1>
-=======
-        <h1>PRIME PRINT</h1>
-a7da25260dceea429f5eb518d6e1724241ceebfa
-        <div class="sub-header">Tecnologia Avançada de Análise e Gestão de Cotas da Lotofácil</div>
-        <button onclick="mostrarRegras()" class="btn-regras">📜 Ver Regras do Sistema</button>
+        <p>PRIME PRINT</p>
+        <p class="subtitle">Tecnologia Avançada de Análise e Gestão de Cotas da Lotofácil</p>
+        <a href="#" class="btn-regras">📄 Ver Regras do Sistema</a>
     </header>
 
-    <div class="grid-painéis">
-
-        <div class="card">
-            <h2>🛒 Adquirir Cota(s) Oficial(ais)</h2>
-HEAD
-            
-            <div class="passos-fluxo" id="barra_fluxo_indicadores">
-                <span id="ind_cadastro" class="p-etapa ativo">1. Identificação</span>
-                <span id="ind_pagamento" class="p-etapa">2. Escolha & Pagamento</span>
-            </div>
-HEAD
-  
-            <form action="/salvar_venda" method="POST" onsubmit="gravarDadosAntesDeEnviar()">
-
-                <div id="bloco_cadastro">
-                    
-                    <div id="sub_novo_cadastro">
-                        <a class="alternador-login" onclick="mudarParaModoLogin(true)">📲 Já comprou antes? Entrar pelo Telefone</a>
-                        <h3>👤 Dados Gerais do Comprador</h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                            <div>
-                                <label>Nome Completo do Comprador:</label>
-                                <input type="text" id="campo_nome" name="nome_cliente" placeholder="Ex: João Silva Santos" required>
-                            </div>
-                            <div>
-                                <label>CPF do Comprador:</label>
-                                <input type="text" id="campo_cpf" name="cpf_cliente" placeholder="Ex: 000.000.000-00" required>
-                            </div>
-                        </div>
-
-                        <label>Contacto Telefónico:</label>
-                        <input type="text" id="campo_contato" name="contato" placeholder="Ex: (99) 99999-9999" required>
-
-                        <label>Endereço Completo (Rua, nº, Bairro):</label>
-                        <input type="text" id="campo_endereco" name="endereco" placeholder="Ex: Rua Projetada, 100" required>
-
-                        <label>Cidade / Estado:</label>
-                        <input type="text" id="campo_cidade" name="cidade" placeholder="Ex: São Paulo - SP" required>
-
-                        <button type="button" class="btn-acao btn-simular" style="margin-top: 10px;" onclick="avancarParaPagamento(true)">Confirmar Cadastro e Escolher Cotas ➔</button>
-                    </div>
-
-                    <div id="sub_login_telefone" style="display: none;">
-                        <a class="alternador-login" style="color: #94a3b8;" onclick="mudarParaModoLogin(false)">⬅ Voltar para Novo Cadastro</a>
-                        <h3>📲 Acesso Rápido para Clientes</h3>
-                        
-                        <label>Informe seu Número de Telefone cadastrado:</label>
-                        <input type="text" id="login_contato_input" placeholder="Ex: (99) 99999-9999">
-                        
-                        <button type="button" class="btn-acao btn-simular" style="background: #3b82f6;" onclick="ejecutarAcessoRapidoTelefone()">Verificar Telefone & Avançar ➔</button>
-                    </div>
-
-                    <div id="sub_cliente_conectado" style="display: none;">
-                        <h3>👤 Identificação Confirmada</h3>
-                        <div class="box-cliente-conectado">
-                            <div>
-                                <span style="font-size: 14px; color: #10b981; font-weight: bold;">✓ Cliente Ativo</span><br>
-                                <span id="txt_cliente_logado" style="font-size: 15px; color:#fff;">Nome do Cliente</span>
-                            </div>
-                            <button type="button" class="btn-logoff" onclick="limparSessaoCliente()">Alterar Conta / Sair</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div id="bloco_pagamento" style="display: none;">
-                    <h3>💳 Detalhes do Pedido & Pagamento</h3>
-                    <div class="tabs">
-                        <button type="button" class="tab-btn active" onclick="mudarAba('unico', event)">Cota Única (ID Real)</button>
-                        <button type="button" class="tab-btn" onclick="mudarAba('lote', event)">Comprar em Lote</button>
-                        <button type="button" class="tab-btn" onclick="mudarAba('surpresinha', event)">Surpresinha Automática</button>
-                    </div>
-
-                    <input type="hidden" name="tipo_venda" id="tipo_venda" value="unico">
-
-                    <div id="campo_unico">
-                        <label>Número da Linha / Cota Desejada (1 a 3.268.760):</label>
-                        <input type="number" name="id_combinacao" id="id_combinacao" min="1" max="3268760" oninput="buscarCombinacaoMatriz(this.value)">
-                        <div class="preview-box" id="preview_combinacao"></div>
-                    </div>
-
-                    <div id="campo_lote" style="display:none;">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap:15px;">
-                            <div>
-                                <label>Linha Inicial:</label>
-                                <input type="number" name="id_inicial" min="1" max="3268760">
-                            </div>
-                            <div>
-                                <label>Linha Final:</label>
-                                <input type="number" name="id_final" min="1" max="3268760">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="campo_surpresinha" style="display:none;">
-                        <label>Quantidade de Cotas Aleatórias:</label>
-                        <input type="number" name="qtd_surpresinha" value="1" min="1" max="100">
-                    </div>
-
-                    <div style="display: flex; gap: 15px; margin-top: 20px;">
-                        <button type="button" id="btn_voltar_cadastro" class="btn-regras" style="margin: 0; width: 30%; background: #334155;" onclick="voltarParaCadastro()">⬅ Alterar Dados</button>
-                        <button type="submit" class="btn-acao" style="width: 70%;">Gerar Pix de Pagamento Otimizado</button>
-                    </div>
-                </div>
-
-=======
-            <form action="/salvar_venda" method="POST">
-                <div class="tabs">
-                    <button type="button" class="tab-btn active" onclick="mudarAba('unico', event)">Cota Única (ID Real)</button>
-                    <button type="button" class="tab-btn" onclick="mudarAba('lote', event)">Comprar em Lote</button>
-                    <button type="button" class="tab-btn" onclick="mudarAba('surpresinha', event)">Surpresinha Automática</button>
-                </div>
-
-                <input type="hidden" name="tipo_venda" id="tipo_venda" value="unico">
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                    <div>
-                        <label>Nome Completo do Comprador:</label>
-                        <input type="text" name="nome_cliente" placeholder="Ex: João Silva Santos" required>
-                    </div>
-                    <div>
-                        <label>CPF do Comprador:</label>
-                        <input type="text" name="cpf_cliente" placeholder="Ex: 000.000.000-00" required>
-                    </div>
-                </div>
-
-                <label>Contacto Telefónico:</label>
-                <input type="text" name="contato" placeholder="Ex: (99) 99999-9999">
-
-                <div id="campo_unico">
-                    <label>Número da Linha / Cota Desejada (1 a 3.268.760):</label>
-                    <input type="number" name="id_combinacao" id="id_combinacao" min="1" max="3268760" oninput="buscarCombinacaoMatriz(this.value)">
-                    <div class="preview-box" id="preview_combinacao"></div>
-                </div>
-
-                <div id="campo_lote" style="display:none;">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap:15px;">
-                        <div>
-                            <label>Linha Inicial:</label>
-                            <input type="number" name="id_inicial" min="1" max="3268760">
-                        </div>
-                        <div>
-                            <label>Linha Final:</label>
-                            <input type="number" name="id_final" min="1" max="3268760">
-                        </div>
-                    </div>
-                </div>
-
-                <div id="campo_surpresinha" style="display:none;">
-                    <label>Quantidade de Cotas Aleatórias:</label>
-                    <input type="number" name="qtd_surpresinha" value="1" min="1" max="100">
-                </div>
-
-                <button type="submit" class="btn-acao">Gerar Pix de Pagamento Otimizado</button>
- a7da25260dceea429f5eb518d6e1724241ceebfa
-            </form>
-        </div>
-
-        <div class="card">
-            <h2>📊 Banco de Dados & Varredura Oficial</h2>
-            <label style="color: #10b981; font-size: 15px; font-weight: bold; margin-bottom: 12px; display: block;">
-                Confira o resultado e descubra onde estaria o bilhete premiado:
-            </label>
-            <input type="text" id="dezenas_simuladas" placeholder="Digite as 15 dezenas sorteadas (Ex: 01 02 03...)">
-            <button type="button" class="btn-acao btn-simular" onclick="executarSimulacaoMatriz()">Executar Varredura Geral na Matriz</button>
-
-            <div id="resultado_simulador" style="margin-top: 25px; display: none;"></div>
-        </div>
-
-        <div class="card" style="text-align: center;">
-            <h2 style="justify-content: center;">🎫 Meus Bilhetes</h2>
-            
-            <div class="alert-resultado">
-                <span style="font-size: 12px; color: #94a3b8; display:block;">Sorteio/Resultado Oficial Ativo no momento:</span>
-                <span id="mostra_resultado_oficial" style="font-family: monospace; font-size: 16px; font-weight: bold; color: #f59e0b;">Carregando...</span>
-            </div>
-
-            <button type="button" id="btn_meus_bilhetes" class="btn-acao" style="background: #8b5cf6; width: 60%; margin: 0 auto;" onclick="toggleMeusBilhetes()">Ver Meus Bilhetes</button>
-            
-            <div id="area_meus_bilhetes" style="display: none; margin-top: 25px; text-align: left;">
-HEAD
-                <div style="font-size: 12px; color:#94a3b8; margin-bottom: 10px;">Aqui aparecem exclusivamente as suas cotas adquiridas.</div>
-                
-                <div class="vendas-container" id="container_vendas_privadas">
-                    <p style="text-align:center; color:#94a3b8; font-size:13px; margin:20px 0;">Por favor, identifique-se ou faça um cadastro para ver seus bilhetes.</p>
-=======
-                <div style="font-size: 12px; color:#94a3b8; margin-bottom: 10px;">Aqui aparecem as suas cotas após a confirmação do pagamento. Bilhetes com 11 ou mais pontos mudam de cor automaticamente!</div>
-                <div class="vendas-container">
-                    {% if not vendas %}
-                        <p style="text-align:center; color:#94a3b8; font-size:13px; margin:20px 0;">Nenhuma cota foi localizada para você neste ciclo.</p>
-                    {% else %}
-                        {% for v in vendas %}
-                            <div class="item-venda">
-                                <div>
-                                    <b style="color:#3b82f6;">ID/Linha: {{ v.id_combinacao }}</b> <br>
-                                    <span style="font-family:monospace; color:#cbd5e1;">{{ v.dezenas }}</span>
-                                </div>
-                                <div>
-                                    <span class="badge-pontos {% if v.pontos >= 11 %}bg-ganhou{% else %}bg-normal{% endif %}">
-                                        {{ v.pontos }} Pts
-                                    </span>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    {% endif %}
- a7da25260dceea429f5eb518d6e1724241ceebfa
-                </div>
-            </div>
-        </div>
-
-        {% if admin %}
-        <div class="card" style="border: 2px solid #ef4444;">
-HEAD
-            <h2 style="color:#ef4444;">⚙️ Console do Administrator</h2>
-=======
-            <h2 style="color:#ef4444;">⚙️ Console do Administrador</h2>
- a7da25260dceea429f5eb518d6e1724241ceebfa
-            
-            <form action="/varredura" method="POST" style="margin-bottom: 20px;">
-                <label style="color: #ef4444; font-weight: bold;">CADASTRAR RESULTADO OFICIAL (15 Dezenas):</label>
-                <input type="text" name="dezenas_oficiais" placeholder="Ex: 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15">
-                <button type="submit" class="btn-acao" style="background:#10b981;">Confirmar Resultado Oficial e Pontuar</button>
-            </form>
-
-            <hr style="border-color: #334155; margin: 20px 0;">
-HEAD
-            <label style="color: #ef4444; font-weight: bold; margin-bottom: 10px; display: block;">📋 RELATÓRIO GERAL DE VENDAS ATIVAS (ADMINISTRADOR):</label>
-            <div class="vendas-container" style="max-height: 300px; margin-bottom: 20px;">
-                {% if not vendas %}
-                    <p style="text-align:center; color:#94a3b8; font-size:13px; margin:20px 0;">Nenhuma venda registrada no sistema até o momento.</p>
-                {% else %}
-                    {% for v in vendas %}
-                        <div class="item-venda" style="border-bottom: 1px solid #ef4444;">
-                            <div>
-                                <b style="color:#3b82f6;">Linha: {{ v.id_combinacao }}</b> | <span style="color:#10b981;">{{ v.pontos }} Pts</span><br>
-                                <div class="admin-info-localizacao">
-                                    👤 <b>Cliente:</b> {{ v.cliente }} | 📞 <b>Tel:</b> {{ v.contato }}<br>
-                                    📍 <b>Endereço:</b> {{ v.endereco }} - {{ v.cidade }}
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            </div>
-
-            <hr style="border-color: #334155; margin: 20px 0;">
-
-=======
-a7da25260dceea429f5eb518d6e1724241ceebfa
-            <form action="/atualizar_valor_cota" method="POST" style="margin-bottom: 20px;">
-                <label>Preço Atual da Cota:</label>
-                <input type="text" name="novo_valor" value="{{ '%.2f'|format(valor_cota) }}">
-                <button type="submit" class="btn-acao" style="background:#3b82f6;">Atualizar Preço</button>
-            </form>
-            
-            <hr style="border-color: #334155; margin: 20px 0;">
-            
-            <form action="/salvar_regras" method="POST" style="margin-bottom: 20px;">
-HEAD
-                <label>Regras do Sistema:</label>
-                <textarea name="regras_texto" rows="5">{{ regras }}</textarea>
-                <button type="submit" class="btn-acao" style="background:#f59e0b; margin-top: 10px;">Salvar Regras</button>
-            </form>
-
-            <form action="/zerar_vendas" method="POST">
-                <button type="submit" class="btn-acao" style="background:#ef4444;" onclick="return confirm('Tem certeza?')">Limpar Base de Vendas</button>
-=======
-                <label>Regras do Sistema (Exibidas para o cliente):</label>
-                <textarea name="regras_texto" rows="5" placeholder="Digite as regras aqui...">{{ regras }}</textarea>
-                <button type="submit" class="btn-acao" style="background:#f59e0b; margin-top: 10px;">Salvar Regras</button>
-            </form>
-
-            <hr style="border-color: #334155; margin: 20px 0;">
-
-            <form action="/zerar_vendas" method="POST">
-                <button type="submit" class="btn-acao" style="background:#ef4444;" onclick="return confirm('Tem certeza que deseja limpar toda a base de vendas?')">Limpar Base de Vendas</button>
-a7da25260dceea429f5eb518d6e1724241ceebfa
-            </form>
-        </div>
-        {% endif %}
-    </div>
-</div>
-
-<script>
-HEAD
-    document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("mostra_resultado_oficial").innerText = `Aguardando apuração`;
-        verificarClienteExistente();
-    });
-
-    // SISTEMA AJAX PRIVADO: BUSCA SÓ OS BILHETES DO TELEFONE CONECTADO
-    function carregarBilhetesDoCliente(telefone) {
-        var container = document.getElementById("container_vendas_privadas");
-        if(!telefone) return;
-
-        var formData = new FormData();
-        formData.append("contato", telefone);
-
-        fetch("/obter_meus_bilhetes", { method: "POST", body: formData })
-        .then(res => res.json())
-        .then(data => {
-            if(data.sucesso && data.vendas.length > 0) {
-                var htmlContent = "";
-                data.vendas.forEach(function(v) {
-                    var badgeClass = v.pontos >= 11 ? "bg-ganhou" : "bg-normal";
-                    htmlContent += `
-                        <div class="item-venda">
-                            <div>
-                                <b style="color:#3b82f6;">ID/Linha: ${v.id_combinacao}</b> <br>
-                                <span style="font-family:monospace; color:#cbd5e1;">${v.dezenas}</span>
-                            </div>
-                            <div>
-                                <span class="badge-pontos ${badgeClass}">${v.pontos} Pts</span>
-                            </div>
-                        </div>`;
-                });
-                container.innerHTML = htmlContent;
-            } else {
-                container.innerHTML = `<p style="text-align:center; color:#94a3b8; font-size:13px; margin:20px 0;">Nenhum bilhete pago ou localizado para o telefone ${telefone}.</p>`;
-            }
-        }).catch(err => {
-            container.innerHTML = `<p style="text-align:center; color:#ef4444; font-size:13px; margin:20px 0;">Erro ao carregar seus bilhetes.</p>`;
-        });
-    }
-
-    function verificarClienteExistente() {
-        var clienteSalvo = localStorage.getItem("primeprint_session_cliente");
-        if(clienteSalvo) {
-            var data = JSON.parse(clienteSalvo);
-            
-            document.getElementById("campo_nome").value = data.nome;
-            document.getElementById("campo_cpf").value = data.cpf;
-            document.getElementById("campo_contato").value = data.contato;
-            document.getElementById("campo_endereco").value = data.endereco;
-            document.getElementById("campo_cidade").value = data.cidade;
-
-            document.getElementById("txt_cliente_logado").innerHTML = `<b>${data.nome}</b><br><span style="color:#94a3b8; font-size:13px;">📞 Tel: ${data.contato}</span>`;
-            
-            document.getElementById("sub_novo_cadastro").style.display = "none";
-            document.getElementById("sub_login_telefone").style.display = "none";
-            document.getElementById("sub_cliente_conectado").style.display = "block";
-            
-            configurarRequiredCadastro(false);
-
-            document.getElementById("bloco_pagamento").style.display = "block";
-            document.getElementById("btn_voltar_cadastro").style.display = "none"; 
-            document.getElementById("barra_fluxo_indicadores").style.display = "none"; 
-
-            // Roda o filtro de segurança de bilhetes
-            carregarBilhetesDoCliente(data.contato);
-        }
-    }
-
-    function limparSessaoCliente() {
-        if(confirm("Deseja sair desta conta?")) {
-            localStorage.removeItem("primeprint_session_cliente");
-            location.reload(); // Atualiza para limpar estados residuais
-        }
-    }
-
-    function gravarDadosAntesDeEnviar() {
-        var obj = {
-            nome: document.getElementById("campo_nome").value,
-            cpf: document.getElementById("campo_cpf").value,
-            contato: document.getElementById("campo_contato").value,
-            endereco: document.getElementById("campo_endereco").value,
-            cidade: document.getElementById("campo_cidade").value
-        };
-        localStorage.setItem("primeprint_session_cliente", JSON.stringify(obj));
-    }
-
-    function mudarParaModoLogin(deveLogar) {
-        if(deveLogar) {
-            document.getElementById("sub_novo_cadastro").style.display = "none";
-            document.getElementById("sub_login_telefone").style.display = "block";
-            configurarRequiredCadastro(false);
-        } else {
-            document.getElementById("sub_novo_cadastro").style.display = "block";
-            document.getElementById("sub_login_telefone").style.display = "none";
-            configurarRequiredCadastro(true);
-        }
-    }
-
-    function configurarRequiredCadastro(status) {
-        document.getElementById("campo_nome").required = status;
-        document.getElementById("campo_cpf").required = status;
-        document.getElementById("campo_contato").required = status;
-        document.getElementById("campo_endereco").required = status;
-        document.getElementById("campo_cidade").required = status;
-    }
-
-    function ejecutarAcessoRapidoTelefone() {
-        var telInput = document.getElementById("login_contato_input").value;
-        if(!telInput.trim()) { alert("Informe seu telefone."); return; }
-
-        var formData = new FormData();
-        formData.append("contato", telInput);
-
-        fetch("/buscar_por_telefone", { method: "POST", body: formData })
-        .then(res => res.json())
-        .then(data => {
-            if(data.sucesso) {
-                var obj = { nome: data.nome, cpf: data.cpf, contato: telInput, endereco: data.endereco, city: data.cidade, cidade: data.cidade };
-                localStorage.setItem("primeprint_session_cliente", JSON.stringify(obj));
-                verificarClienteExistente();
-            } else {
-                alert(data.mensagem);
-            }
-        }).catch(err => alert("Erro ao comunicar com o servidor."));
-    }
-
-    function avancarParaPagamento(veioDoBotaoCadastro) {
-        var nome = document.getElementById("campo_nome");
-        var cpf = document.getElementById("campo_cpf");
-        var contato = document.getElementById("campo_contato");
-        var endereco = document.getElementById("campo_endereco");
-        var cidade = document.getElementById("campo_cidade");
-
-        if(!nome.reportValidity() || !cpf.reportValidity() || !contato.reportValidity() || !endereco.reportValidity() || !cidade.reportValidity()) {
-            return; 
-        }
-
-        if(veioDoBotaoCadastro) {
-            gravarDadosAntesDeEnviar();
-            verificarClienteExistente();
-            return;
-        }
-    }
-
-    function voltarParaCadastro() {
-        document.getElementById("bloco_cadastro").style.display = "block";
-        document.getElementById("bloco_pagamento").style.display = "none";
-    }
-=======
-    // Carrega e exibe o resultado oficial atual para o cliente na tela
-    document.addEventListener("DOMContentLoaded", function() {
-        var resOficial = `{{ regras | replace('\n', ' ') }}`; // Usado como gancho simples
-        // Em vez de puxar de variável de template, vamos buscar via banco implícito na página renderizada
-        document.getElementById("mostra_resultado_oficial").innerText = `Aguardando apuração`;
-    });
-
-    // Requisição em segundo plano para capturar o resultado oficial atual, se houver
-    fetch('/buscar_combinacao/1').then(() => {
-        // Exemplo de exibição do resultado armazenado
-        let resTemp = "{{ resultado_oficial }}";
-        if(resTemp && resTemp.length > 5) {
-            document.getElementById("mostra_resultado_oficial").innerText = resTemp;
-        } else {
-            document.getElementById("mostra_resultado_oficial").innerText = "Sorteio ainda não apurado";
-        }
-    });
-a7da25260dceea429f5eb518d6e1724241ceebfa
-
-    function mudarAba(tipo, event) {
-        document.getElementById('tipo_venda').value = tipo;
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        event.currentTarget.classList.add('active');
-        document.getElementById('campo_unico').style.display = tipo === 'unico' ? 'block' : 'none';
-        document.getElementById('campo_lote').style.display = tipo === 'lote' ? 'block' : 'none';
-        document.getElementById('campo_surpresinha').style.display = tipo === 'surpresinha' ? 'block' : 'none';
-    }
-
-    function buscarCombinacaoMatriz(id) {
-        var preview = document.getElementById('preview_combinacao');
-HEAD
-        if (!id || id < 1 || id > 3268760) { preview.style.display = 'none'; return; }
-=======
-        if (!id || id < 1 || id > 3268760) {
-            preview.style.display = 'none';
-            return;
-        }
-a7da25260dceea429f5eb518d6e1724241ceebfa
-        fetch('/buscar_combinacao/' + id)
-        .then(res => res.json())
-        .then(data => {
-            if (data.sucesso) {
-                preview.innerHTML = `<div style="text-align: center; color: #f8fafc;">
-HEAD
-                    <span>Linha selecionada: <b>${id}</b></span><br>
-                    <span style="color: #f59e0b; font-size: 13px; margin-top: 5px; display: block;">🔒 Combinação protegida.</span>
-=======
-                    <span style="font-size: 14px;">Linha selecionada: <b>${id}</b></span><br>
-                    <span style="color: #f59e0b; font-size: 13px; margin-top: 5px; display: block;">
-                        🔒 <i>Combinação protegida. O jogo será revelado após a confirmação do pagamento.</i>
-                    </span>
-a7da25260dceea429f5eb518d6e1724241ceebfa
-                </div>`;
-                preview.style.display = 'block';
-            } else { preview.style.display = 'none'; }
-        });
-    }
-
-    function toggleMeusBilhetes() {
-        var div = document.getElementById("area_meus_bilhetes");
-        div.style.display = (div.style.display === "none") ? "block" : "none";
-    }
-
-    function executarSimulacaoMatriz() {
-        var dezenas = document.getElementById("dezenas_simuladas").value;
-        if (!dezenas.trim()) { alert("Digite o resultado."); return; }
-HEAD
-=======
+    <div class="container">
+        <h2>🛒 Adquirir Cota(s) Oficial(ais)</h2>
         
- a7da25260dceea429f5eb518d6e1724241ceebfa
-        var formData = new FormData();
-        formData.append("dezenas_simuladas", dezenas);
-        fetch("/simular_resultado", { method: "POST", body: formData })
-        .then(res => res.json())
-        .then(data => {
-            if (data.sucesso) {
-                var divResultado = document.getElementById("resultado_simulador");
-                divResultado.innerHTML = `<div style="background:#1e293b; padding:20px; border-radius:8px;">
-HEAD
-                    <b style="color:#10b981;">🏆 ID premiado: ${data.jogo_15.linha}</b><br><span>${data.jogo_15.dezenas}</span>
-=======
-                    <b style="color:#10b981;">🏆 ID premiado: ${data.jogo_15.linha}</b><br>
-                    <span style="color:#fff;">${data.jogo_15.dezenas}</span>
- a7da25260dceea429f5eb518d6e1724241ceebfa
-                </div>`;
-                divResultado.style.display = "block";
-            }
-        });
-    }
+        <div class="tab-nav">
+            <button class="tab-btn">1. IDENTIFICAÇÃO</button>
+            <button style="background-color: #334155;" class="tab-btn">2. ESCOLHA & PAGAMENTO</button>
+        </div>
 
-    function mostrarRegras() {
-        alert(`{{ regras | replace('\n', '\\n') | replace('\r', '') }}`);
-    }
-</script>
+        <h3>Dados Gerais do Comprador</h3>
+        
+        <div class="form-group">
+            <label for="nome">Nome Completo do Comprador:</label>
+            <input type="text" id="nome" placeholder="Ex: João Silva Santos">
+        </div>
+
+        <div class="form-group">
+            <label for="cpf">CPF do Comprador:</label>
+            <input type="text" id="cpf" placeholder="Ex: 000.000.000-00">
+        </div>
+        
+        <p style="font-size: 0.9rem; color: #94a3b8; text-align: right;">
+            Já comprou antes? <a href="#" style="color: #60a5fa;">Entrar pelo Telefone</a>
+        </p>
+    </div>
+
 </body>
 </html>
