@@ -307,7 +307,7 @@ def index():
                                       ganhadores_15=ganhadores_15,
                                       ganhadores_14=ganhadores_14)
     
-    caminho_html = "C:\\Users\\Prime Print\\Desktop\\loto\\templates\\index.html"
+    caminho_html = os.path.join("templates", "index.html")
     with open(caminho_html, 'r', encoding='utf-8') as arquivo:
         conteudo_html = arquivo.read()
 
