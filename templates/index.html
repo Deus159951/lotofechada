@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- HEAD
+HEAD
     <title>LOTO-FACIL FECHADA - Central de Cotas Inteligente</title>
 =======
     <title>PRIME PRINT - Central de Cotas Inteligente</title>
- a7da25260dceea429f5eb518d6e1724241ceebfa
+a7da25260dceea429f5eb518d6e1724241ceebfa
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
         .container { max-width: 900px; margin: 0 auto; }
@@ -17,10 +17,10 @@
         .grid-painéis { display: grid; grid-template-columns: 1fr; gap: 30px; }
         .card { background: #1e293b; border-radius: 12px; padding: 25px; border: 1px solid #334155; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
         h2 { margin-top: 0; font-size: 20px; color: #f1f5f9; display: flex; align-items: center; gap: 10px; }
- HEAD
+HEAD
         h3 { margin-top: 0; font-size: 16px; color: #3b82f6; margin-bottom: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 8px; }
 =======
- a7da25260dceea429f5eb518d6e1724241ceebfa
+a7da25260dceea429f5eb518d6e1724241ceebfa
         .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 1px solid #334155; padding-bottom: 10px; }
         .tab-btn { background: #0f172a; border: 1px solid #334155; color: #94a3b8; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 13px; }
         .tab-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
@@ -36,10 +36,10 @@
         .btn-simular:hover { background: #2563eb; }
         .btn-regras { background: #475569; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: bold; margin-top: 15px; transition: 0.2s; }
         .btn-regras:hover { background: #64748b; }
- HEAD
+HEAD
         
 =======
- a7da25260dceea429f5eb518d6e1724241ceebfa
+a7da25260dceea429f5eb518d6e1724241ceebfa
         .vendas-container { max-height: 250px; overflow-y: auto; background: #0f172a; border-radius: 6px; padding: 10px; border: 1px solid #334155; }
         .item-venda { display: flex; justify-content: space-between; align-items: center; padding: 8px; border-bottom: 1px solid #1e293b; font-size: 13px; }
         .badge-pontos { padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; }
@@ -85,7 +85,7 @@ HEAD
                 <span id="ind_cadastro" class="p-etapa ativo">1. Identificação</span>
                 <span id="ind_pagamento" class="p-etapa">2. Escolha & Pagamento</span>
             </div>
- HEAD
+HEAD
   
             <form action="/salvar_venda" method="POST" onsubmit="gravarDadosAntesDeEnviar()">
 
@@ -255,7 +255,7 @@ HEAD
             <button type="button" id="btn_meus_bilhetes" class="btn-acao" style="background: #8b5cf6; width: 60%; margin: 0 auto;" onclick="toggleMeusBilhetes()">Ver Meus Bilhetes</button>
             
             <div id="area_meus_bilhetes" style="display: none; margin-top: 25px; text-align: left;">
- HEAD
+HEAD
                 <div style="font-size: 12px; color:#94a3b8; margin-bottom: 10px;">Aqui aparecem exclusivamente as suas cotas adquiridas.</div>
                 
                 <div class="vendas-container" id="container_vendas_privadas">
@@ -287,7 +287,7 @@ HEAD
 
         {% if admin %}
         <div class="card" style="border: 2px solid #ef4444;">
- HEAD
+HEAD
             <h2 style="color:#ef4444;">⚙️ Console do Administrator</h2>
 =======
             <h2 style="color:#ef4444;">⚙️ Console do Administrador</h2>
@@ -300,8 +300,7 @@ HEAD
             </form>
 
             <hr style="border-color: #334155; margin: 20px 0;">
-
- HEAD
+HEAD
             <label style="color: #ef4444; font-weight: bold; margin-bottom: 10px; display: block;">📋 RELATÓRIO GERAL DE VENDAS ATIVAS (ADMINISTRADOR):</label>
             <div class="vendas-container" style="max-height: 300px; margin-bottom: 20px;">
                 {% if not vendas %}
@@ -324,7 +323,7 @@ HEAD
             <hr style="border-color: #334155; margin: 20px 0;">
 
 =======
- a7da25260dceea429f5eb518d6e1724241ceebfa
+a7da25260dceea429f5eb518d6e1724241ceebfa
             <form action="/atualizar_valor_cota" method="POST" style="margin-bottom: 20px;">
                 <label>Preço Atual da Cota:</label>
                 <input type="text" name="novo_valor" value="{{ '%.2f'|format(valor_cota) }}">
@@ -334,7 +333,7 @@ HEAD
             <hr style="border-color: #334155; margin: 20px 0;">
             
             <form action="/salvar_regras" method="POST" style="margin-bottom: 20px;">
- HEAD
+HEAD
                 <label>Regras do Sistema:</label>
                 <textarea name="regras_texto" rows="5">{{ regras }}</textarea>
                 <button type="submit" class="btn-acao" style="background:#f59e0b; margin-top: 10px;">Salvar Regras</button>
@@ -352,7 +351,7 @@ HEAD
 
             <form action="/zerar_vendas" method="POST">
                 <button type="submit" class="btn-acao" style="background:#ef4444;" onclick="return confirm('Tem certeza que deseja limpar toda a base de vendas?')">Limpar Base de Vendas</button>
- a7da25260dceea429f5eb518d6e1724241ceebfa
+a7da25260dceea429f5eb518d6e1724241ceebfa
             </form>
         </div>
         {% endif %}
@@ -360,7 +359,7 @@ HEAD
 </div>
 
 <script>
- HEAD
+HEAD
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("mostra_resultado_oficial").innerText = `Aguardando apuração`;
         verificarClienteExistente();
@@ -527,7 +526,7 @@ HEAD
             document.getElementById("mostra_resultado_oficial").innerText = "Sorteio ainda não apurado";
         }
     });
- a7da25260dceea429f5eb518d6e1724241ceebfa
+a7da25260dceea429f5eb518d6e1724241ceebfa
 
     function mudarAba(tipo, event) {
         document.getElementById('tipo_venda').value = tipo;
@@ -540,20 +539,20 @@ HEAD
 
     function buscarCombinacaoMatriz(id) {
         var preview = document.getElementById('preview_combinacao');
- HEAD
+HEAD
         if (!id || id < 1 || id > 3268760) { preview.style.display = 'none'; return; }
 =======
         if (!id || id < 1 || id > 3268760) {
             preview.style.display = 'none';
             return;
         }
- a7da25260dceea429f5eb518d6e1724241ceebfa
+a7da25260dceea429f5eb518d6e1724241ceebfa
         fetch('/buscar_combinacao/' + id)
         .then(res => res.json())
         .then(data => {
             if (data.sucesso) {
                 preview.innerHTML = `<div style="text-align: center; color: #f8fafc;">
- HEAD
+HEAD
                     <span>Linha selecionada: <b>${id}</b></span><br>
                     <span style="color: #f59e0b; font-size: 13px; margin-top: 5px; display: block;">🔒 Combinação protegida.</span>
 =======
@@ -561,7 +560,7 @@ HEAD
                     <span style="color: #f59e0b; font-size: 13px; margin-top: 5px; display: block;">
                         🔒 <i>Combinação protegida. O jogo será revelado após a confirmação do pagamento.</i>
                     </span>
- a7da25260dceea429f5eb518d6e1724241ceebfa
+a7da25260dceea429f5eb518d6e1724241ceebfa
                 </div>`;
                 preview.style.display = 'block';
             } else { preview.style.display = 'none'; }
@@ -576,7 +575,7 @@ HEAD
     function executarSimulacaoMatriz() {
         var dezenas = document.getElementById("dezenas_simuladas").value;
         if (!dezenas.trim()) { alert("Digite o resultado."); return; }
- HEAD
+HEAD
 =======
         
  a7da25260dceea429f5eb518d6e1724241ceebfa
@@ -588,7 +587,7 @@ HEAD
             if (data.sucesso) {
                 var divResultado = document.getElementById("resultado_simulador");
                 divResultado.innerHTML = `<div style="background:#1e293b; padding:20px; border-radius:8px;">
- HEAD
+HEAD
                     <b style="color:#10b981;">🏆 ID premiado: ${data.jogo_15.linha}</b><br><span>${data.jogo_15.dezenas}</span>
 =======
                     <b style="color:#10b981;">🏆 ID premiado: ${data.jogo_15.linha}</b><br>
